@@ -159,7 +159,7 @@ VM.section('about', ({ gsap, reduce, byId, rand, scrollTo, onVisible, el }) => {
     graduation: 'cap and tassel, a lawn, the library stacks, yellow tulips.',
     modeling: 'a studio portfolio shot, then four looks for zumiez.',
     signs: "sign shop llc: jameson's getaway, cowgirl kettle corn & lemonade.",
-    video: 'siesta g. two cuts of one day.',
+    video: 'siesta g. a 39-second reel from a market day.',
     details: 'close-ups: threads, charms, rhinestones, dots.',
     archive: 'every piece on one wall.',
     contact: 'instagram, site map, credits.',
@@ -1139,7 +1139,7 @@ VM.section('video', ({ gsap, ScrollTrigger, mm, reduce, isDesktop, carousel, mar
 
   /* ---------- phones: one reel at ~74vw, the next peeking, through core's carousel (no autoplay: the reels play themselves) ---------- */
   let car = null;
-  const LABEL = 'siesta g reels. swipe, or use the arrows, to move between the two cuts';
+  const LABEL = 'siesta g reel';
   mm.add('(max-width: 599px)', () => {
     if (!car) car = carousel(rail, { slides: '.vd-slide', interval: 0, label: LABEL });
     else {
@@ -1148,7 +1148,7 @@ VM.section('video', ({ gsap, ScrollTrigger, mm, reduce, isDesktop, carousel, mar
     }
     return () => {
       rail.classList.remove('car'); rail.removeAttribute('tabindex'); rail.removeAttribute('role'); rail.removeAttribute('aria-roledescription');
-      rail.setAttribute('aria-label', 'siesta g reels'); rail.scrollLeft = 0;
+      rail.setAttribute('aria-label', 'siesta g reel'); rail.scrollLeft = 0;
     };
   });
 
@@ -1294,7 +1294,7 @@ VM.section('archive', ({ gsap, ScrollTrigger, Flip, mm, reduce, files, lenis, sc
   const chipBox = el.querySelector('[data-ar-chips]');
   const status = el.querySelector('[data-ar-status]');
   if (!wall || !chipBox) return;
-  /* the 27 tiles are static markup in the section's HTML (manifest order, a line on what is in each picture), so the menu
+  /* the 26 tiles are static markup in the section's HTML (manifest order, a line on what is in each picture), so the menu
      counts them and the wall reads without JS. this script places them, filters them and wires the film tiles */
   const tiles = [...wall.querySelectorAll('.ar-tile')];
   const inner = t => t.firstElementChild;

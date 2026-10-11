@@ -1393,6 +1393,9 @@ html.has-hover #video .vd-seek { cursor: var(--cur-pointer); }
   #video .vd-specs { order: 2; margin-top: 36px; }
 }
 
+/* one reel: centred on phones (no carousel needed) */
+@media (max-width: 599px) { #video .vd-rail { justify-content: center; overflow: visible; } }
+
 /* ===== 11-details.css ===== */
 /* 11 — details. six pieces. the big print always shows the whole piece, never scaled or cropped.
    beside it a smaller print is the close-up: its photo scales in on one focal point as it crosses the
