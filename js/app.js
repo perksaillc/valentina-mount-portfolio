@@ -499,7 +499,7 @@ function renderLb(f) {
   lb.querySelector('.lightbox-bar .pos').textContent = `${pad(lbIndex + 1)} / ${pad(lbGroup.length)}`;
   lb.querySelectorAll('.lightbox-nav').forEach(b => { b.hidden = lbGroup.length < 2; });
   /* warm the neighbours so the arrows feel instant */
-  [1, -1].forEach(d => { const n = byId(lbGroup[(lbIndex + d + lbGroup.length) % lbGroup.length]); if (n) { const im = new Image(); im.src = `assets/img/${n.id}-960.webp`; } });
+  [1, -1].forEach(d => { const n = byId(lbGroup[(lbIndex + d + lbGroup.length) % lbGroup.length]); if (n) { const im = new Image(); im.src = `assets/img/${n.id}-${n.w >= 960 ? 960 : 480}.webp`; } });
 }
 function lbStep(dir) {
   if (lbGroup.length < 2) return;
